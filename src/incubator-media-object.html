@@ -13,24 +13,43 @@ See <a href="https://vaadin.com/license/cval-3">the website</a> for the complete
 <dom-module id="incubator-media-object">
   <template>
     <style>
+      :host {
+        display: block;
+      }
+
+      [part="media"] {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      [part="media-content"] {
+        flex: 1;
+      }
     </style>
 
-    <h1>Hello world</h1>
+    <div part="media">
+      <div part="start">
+        <slot name="start"></slot>
+      </div>
+      <div part="media-content">
+        <div part="header">
+          <div part="title">
+            <slot name="title"></slot>
+          </div>
+          <div part="subtitle">
+              <slot name="subtitle"></slot>
+            </div>
+        </div>
+        <slot></slot>
+        <div>
+            <slot name="end"></slot>
+        </div>
+      </div>
+    </div>
   </template>
 
   <script>
-    (function() {
-      /**
-       * `<incubator-media-object>` is a template for incubator components.
-       *
-       * ```
-       * <incubator-media-object>
-       * </incubator-media-object>
-       * ```
-       *
-       * @memberof Vaadin
-       * @demo demo/index.html
-       */
+    (function () {
       class VaadinIncubatorElement extends Vaadin.ElementMixin(Vaadin.ThemableMixin(Polymer.Element)) {
         static get is() {
           return 'incubator-media-object';

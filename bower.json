@@ -36,6 +36,9 @@
     "web-component-tester": "^6.1.5",
     "test-fixture": "^3.0.0",
     "vaadin-demo-helpers": "vaadin/vaadin-demo-helpers#^1.0.0",
-    "vaadin-icons": "vaadin/vaadin-icons#^4.1.4"
+    "vaadin-icons": "vaadin/vaadin-icons#^4.1.4",
+    "incubator-avatar": "vaadin/incubator-avatar#^1.1.0",
+    "incubator-popup": "vaadin/incubator-popup#^1.0.1",
+    "vaadin-button": "^2.1.0"
   }
 }

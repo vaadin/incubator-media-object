@@ -9,7 +9,40 @@
     <h3>Demo sample</h3>
     <vaadin-demo-snippet id="incubator-media-object-demo-sample">
       <template preserve-content>
+        <style>
+          div[slot="end"] {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          incubator-popup {
+            display: none;
+          }
+        </style>
+
         <incubator-media-object>
+          <h2 slot="title">The title to a meaningful post</h2>
+          <h4 slot="subtitle">Authored by Emmet plugin of VSCode</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum rerum asperiores assumenda repellendus quibusdam perferendis aliquid numquam, autem officiis nostrum sed? Odio molestiae praesentium dolores at molestias blanditiis, totam voluptates!Saepe similique iure qui tenetur, alias unde eligendi soluta nisi laborum ea earum velit doloribus aliquam iste? Nostrum qui nam ab sit non expedita repellat dicta rem inventore? Esse, hic.
+            </p>
+            <incubator-avatar slot="start" name="John Doe"></incubator-avatar>
+            <div slot="end">
+              <i><small>This post was shared two days ago.</small></i>
+              <vaadin-button id="actions" theme="small tertiary icon">
+                <iron-icon icon="vaadin:ellipsis-dots-h"></iron-icon>
+              </vaadin-button>
+              <incubator-popup for="actions">
+                <template>
+                  <vaadin-button theme="small tertiary icon">
+                    <iron-icon icon="vaadin:share"></iron-icon>
+                  </vaadin-button>
+                  <vaadin-button theme="small tertiary icon">
+                    <iron-icon icon="vaadin:heart"></iron-icon>
+                  </vaadin-button>
+                </template>
+              </incubator-popup>
+            </div>
         </incubator-media-object>
       </template>
     </vaadin-demo-snippet>
